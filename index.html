@@ -17,7 +17,7 @@ body{background:#f9f8f3;color:#344139;font-family:"Poppins","Noto Sans TC",sans-
 @media(prefers-reduced-motion:reduce){.text-reveal{opacity:1;transition:none}}
 
 .motion-control{border:1px solid #95a895;border-radius:3px;background:transparent;color:#526d57;padding:5px 9px;font-size:12px;letter-spacing:.04em}
-body.motion-on .text-reveal{opacity:0;transform:translateY(10px);transition:opacity 1.4s ease var(--fade-delay,0s),transform 1.4s ease var(--fade-delay,0s)}
+body.motion-on .text-reveal{opacity:0;transform:translateY(10px);transition:opacity 1.8s ease var(--fade-delay,0s),transform 1.8s ease var(--fade-delay,0s)}
 body.motion-on .text-reveal.in-view{opacity:1;transform:translateY(0)}
 .draw-title.is-drawn>h1,.draw-title.is-drawn>h2,.draw-title.is-drawn>h3{animation:none}
 body:not(.motion-on) .text-reveal{opacity:1;transform:none;transition:none}
@@ -36,6 +36,6 @@ const texts=[...document.querySelectorAll('header strong,nav a,.languages button
 function button(){control.textContent=active?'動畫 ON':'動畫 OFF';control.setAttribute('aria-pressed',String(active));control.setAttribute('aria-label',active?'關閉文字動態 / Turn animation off':'開啟文字動態 / Turn animation on')}
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!active)return;if(entry.isIntersecting){setTimeout(()=>{if(active&&entry.target.getBoundingClientRect().bottom>0)entry.target.classList.add('in-view')},180)}else entry.target.classList.remove('in-view')}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 function apply(){document.body.classList.toggle('motion-on',active);texts.forEach((el,i)=>{observer.unobserve(el);el.classList.add('text-reveal');el.style.setProperty('--fade-delay',((i%3)*.1)+'s');el.classList.remove('in-view');if(active)observer.observe(el);else el.classList.add('in-view')});button()}
-control.onclick=()=>{active=!active;try{localStorage.setItem('portfolio-motion',active?'on':'off')}catch{}apply()};apply();
+control.onclick=()=>{active=!active;try{localStorage.setItem('portfolio-motion',active?'on':'off')}catch{}apply()};document.body.classList.toggle('motion-on',active);texts.forEach(el=>el.classList.add('text-reveal'));button();const startEntrance=()=>setTimeout(apply,170);if(document.readyState==='complete')startEntrance();else window.addEventListener('load',startEntrance,{once:true});
 })();
 </script></body></html>

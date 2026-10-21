@@ -45,3 +45,13 @@ body{opacity:1;transition:opacity .18s ease}body.leaving{opacity:.12}
 
 /* Hide obsolete artwork medium/year metadata if an older cached HTML page is served. */
 .art-label div>p:not(.short){display:none!important}
+
+
+/* Responsive portfolio video embeds */
+.video-frame video{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:contain;background:#050505}
+.video-reel{margin-top:28px;padding-top:22px;border-top:1px solid var(--rule)}
+.video-reel-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.video-reel-grid figure{margin:0;min-width:0}
+.video-reel-grid video{display:block;width:100%;max-height:440px;aspect-ratio:16/9;object-fit:contain;background:#050505;border:1px solid var(--rule)}
+.video-reel-grid figcaption{padding-top:9px;color:var(--dim);font:10px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+@media(min-width:760px){.video-reel-grid{grid-template-columns:1fr 1fr}}

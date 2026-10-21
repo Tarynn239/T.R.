@@ -8,3 +8,30 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(max-width:760px){.site-header{height:auto;min-height:68px;padding:0 22px;flex-wrap:wrap}.menu-toggle{display:block}.nav{display:none;order:3;flex-basis:100%;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px}.nav.is-open{display:flex}.nav a{min-height:48px;border-top:1px solid #272529}.nav a[aria-current=page]:before{left:auto;right:5px}.wrap{padding-left:22px;padding-right:22px}.opening{min-height:calc(100svh - 68px)}.opening-inner{padding-top:65px;padding-bottom:85px}.opening h1{font-size:clamp(58px,13vw,90px)}.opening .curatorial{font-size:14px}.opening-meta{left:22px;right:22px;bottom:18px;gap:15px;flex-wrap:wrap;font-size:8px}.page-intro{grid-template-columns:1fr;gap:22px;padding-top:62px;padding-bottom:30px}.page-intro h1{font-size:clamp(62px,15vw,88px)}.gallery-wall{padding-bottom:70px}.artwork-grid{grid-template-columns:1fr;gap:42px}.artwork-card:nth-child(2){transform:none}.artwork-card .frame img,.artwork-card:nth-child(2) .frame img{aspect-ratio:16/10}.artwork-card{max-width:560px;width:100%;margin:auto}.art-label h2{font-size:32px}.gallery-note{margin-top:42px;flex-direction:column;gap:8px}.detail-head{padding-top:38px}.detail-layout{grid-template-columns:1fr;gap:36px;padding-bottom:50px}.exhibit-copy{order:-1}.exhibit-copy h1{font-size:clamp(48px,12vw,70px)}.credits-top{grid-template-columns:1fr;gap:45px;padding-top:55px}.portrait-frame{max-width:310px}.credits-list{padding-top:0}.credit-row{grid-template-columns:120px 1fr}.finale{padding:68px 22px 55px}.finale h2{font-size:clamp(48px,12vw,80px)}.site-footer{padding:20px 22px;flex-direction:column;gap:12px}.footer-nav{flex-wrap:wrap}}
 @media(max-width:420px){.opening h1{font-size:56px}.opening-meta{letter-spacing:.08em}.credit-row{grid-template-columns:105px 1fr;gap:12px}.cinema-frame{padding:7px}.stills{gap:7px}}
+/* Latest prompt: 靜候成像 / Darkroom Gallery */
+.english-title{font:11px var(--sans);letter-spacing:.34em;color:#c4bdb3;margin:-12px auto 26px;text-transform:uppercase}
+.opening{background:radial-gradient(ellipse at 50% 42%,rgba(232,135,58,.12),transparent 19%),radial-gradient(ellipse at 51% 54%,rgba(27,59,69,.48),transparent 56%),var(--black)}
+.opening-inner{padding-top:74px;padding-bottom:76px}
+.opening h1{font-size:clamp(82px,10.2vw,132px);letter-spacing:.01em}
+.opening .curatorial{font-family:var(--zh);max-width:570px}
+.opening:before{background:linear-gradient(90deg,var(--black) 0%,transparent 22%,transparent 78%,var(--black) 100%),linear-gradient(0deg,var(--black) 0%,transparent 25%,transparent 80%,var(--black) 100%)}
+.home-note{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,8vw,110px);padding-top:100px;padding-bottom:110px;align-items:center}
+.home-note-title{font:400 clamp(42px,6vw,76px)/1.08 var(--serif);margin:18px 0 0;letter-spacing:-.025em}
+.home-note-title em{color:var(--white);font-weight:400}
+.home-note>div:nth-child(2)>p{max-width:520px;color:#c2bbb1;font-size:14px;line-height:2.15;margin:0 0 24px}
+.text-link{display:inline-flex;gap:22px;align-items:center;min-height:44px;border-bottom:1px solid #776d61;font:10px var(--sans);letter-spacing:.18em}
+.text-link:hover{color:var(--amber);border-color:var(--amber)}
+.frame{box-shadow:0 0 0 10px var(--mat),0 0 0 11px rgba(239,234,224,.14),0 18px 45px #0009; margin:10px}
+.frame:after{box-shadow:0 0 22px rgba(232,135,58,.10)}
+.artwork-card:hover .frame,.artwork-card:focus-within .frame{box-shadow:0 0 0 10px var(--mat),0 0 0 11px rgba(232,135,58,.6),0 18px 50px #000b,0 0 34px rgba(232,135,58,.22)}
+.cinema-frame{box-shadow:0 0 0 1px rgba(239,234,224,.2),0 0 32px rgba(232,135,58,.12);padding:clamp(9px,1.3vw,16px)}
+.cinema-frame img{background:#000;aspect-ratio:16/9;object-fit:contain}
+.image-note{font-size:11px;color:#a9a198;line-height:1.8;margin:18px 0 0}
+.contact-links a{overflow-wrap:anywhere}
+@media(max-width:760px){
+ .home-note{grid-template-columns:1fr;gap:25px;padding-top:68px;padding-bottom:75px}
+ .opening h1{font-size:clamp(64px,13vw,92px)}
+ .opening-inner{padding-top:58px;padding-bottom:100px}
+ .frame{margin:8px}
+}
+@media(prefers-reduced-motion:reduce){.scroll-hint:after{animation:none}}

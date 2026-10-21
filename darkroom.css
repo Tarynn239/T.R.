@@ -42,3 +42,6 @@ body{opacity:1;transition:opacity .18s ease}body.leaving{opacity:.12}
 .language-switch:hover,.language-switch:focus-visible{color:var(--amber);border-color:var(--amber)}
 .nav .language-switch[lang="zh-Hant"]{margin-left:8px}
 @media(max-width:760px){.nav .language-switch{display:inline-flex;margin:6px 6px 0 0}.nav .language-switch[lang="zh-Hant"]{margin-left:0}}
+
+/* Hide obsolete artwork medium/year metadata if an older cached HTML page is served. */
+.art-label div>p:not(.short){display:none!important}
